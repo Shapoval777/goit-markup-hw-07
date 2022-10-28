@@ -2,11 +2,8 @@
     padding-bottom: 94px;
   }
   .feature-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
+    @include font(700, 36px, 1.17, 0.03em);
     text-align: center;
-    letter-spacing: 0.03em;
     color: var(--title-text-color);
     margin-bottom: 50px;
   }
@@ -26,11 +23,8 @@
   height: 70px;
   bottom: 0;
   
-    font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
+  @include font(700, 14px, 1.14, 0.03em);
   text-align: center;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--white-color);
   background-color: rgba(47, 48, 58, 0.8);

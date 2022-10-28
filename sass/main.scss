@@ -3,6 +3,8 @@
 @import './base/common.scss';
 @import './utils/hidden';
 
+@import './utils/placeholders';
+@import './utils/mixin';
 @import './components/container';
 @import './components/modal';
 

@@ -5,11 +5,8 @@
   }
   
   .team-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
+    @include font(700, 36px, 1.17, 0.03em);
     text-align: center;
-    letter-spacing: 0.03em;
     color: var(--title-text-color);
     margin-bottom: 50px;
   }
@@ -35,19 +32,13 @@
   }
   
   .team-title-employee {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
+    @include font(500, 16px, 1.19, 0.03em);
     color: var(--title-text-color);
     margin-bottom: 10px;
   }
   
   .team-title-text {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
+    @include font(400, 16px, 1.19, 0.03em);
     color: var(--primary-text-color);
     margin-bottom: 16px;
   }
@@ -75,8 +66,7 @@
        color: var(--customers-border-color);
   
        transition-property: background-color;
-    transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+       @extend %animation-element;
   &:hover,
   &:focus {
    background-color: var(--accent-color);
@@ -86,8 +76,7 @@
     fill: currentColor;
   
     transition-property: color;
-    transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %animation-element;
   .team-soc-link:hover &,
   .team-soc-link:focus & {
   color: var(--white-color);

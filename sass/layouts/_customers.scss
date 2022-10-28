@@ -4,11 +4,8 @@
   }
   
   .customers-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
+    @include font(700, 36px, 1.16, 0.03em);
     text-align: center;
-    letter-spacing: 0.03em;
     color: var(--title-text-color);
     margin-bottom: 50px;
   }
@@ -35,8 +32,7 @@
     border: 1px solid var(--customers-border-color);
   
     transition-property: border;
-    transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %animation-element;
   &:hover,
   &:focus {
     border: 1px solid var(--accent-color);
@@ -47,8 +43,7 @@
     fill: var(--customers-border-color);
   
     transition-property: fill;
-    transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %animation-element;
   .customers-link:hover &,
   .customers-link:focus & {
     fill: var(--accent-color);

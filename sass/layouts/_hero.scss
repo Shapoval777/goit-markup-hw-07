@@ -17,11 +17,8 @@
     background-size: cover;
   }
   
-  .hero-title {
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36x;
-    letter-spacing: 0.06em;
+  .hero__title {
+    @include font(900, 44px, 1.36, 0.06em);
     text-align: center;
     text-transform: uppercase;
     color: var(--white-color);
@@ -31,12 +28,9 @@
     margin-bottom: 30px;
   }
   
-  .hero-btn {
+  .hero__btn {
     font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
+    @include font(700, 16px, 1.88, 0.06em);
     color: var(--white-color);
     background-color: var(--accent-color);
     cursor: pointer;
@@ -48,8 +42,7 @@
     border: none;
   
     transition-property: background-color border-radius;
-      transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %animation-element;
   &:hover,
   &:focus {
     background-color: var(--focus-btn-color);
